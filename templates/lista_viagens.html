@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Lugar</th>
+        <th scope="col">Data</th>
+        <th scope="col">Dias</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for viagem in viagens %}
+
+            <tr>
+                <th scope="row">{{ viagem.id }}</th>
+                <td>{{ viagem.lugar }}</td>
+                <td>{{ viagem.data }}</td>
+                <td>{{ viagem.dias }}</td>
+                <td>
+                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+           
+      {% endfor %}
+    </tbody>
+  </table>
